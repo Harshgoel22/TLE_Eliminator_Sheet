@@ -12,17 +12,10 @@ int main() {
             if(input[i-1]=='b' && input[i]=='a') ba_count++;
         }
 
-        if(ab_count == ba_count) {
-            cout << input << endl;
-        }
-        else if(ab_count > ba_count) {
-            input[n-1]='a';
-            cout << input << endl;
-        }
-        else  {
-            input[0] = 'a';
-            cout << input << endl;
-        }
+        if(ab_count > ba_count) input[n-1]='a';
+        else if(ba_count > ab_count) input[0] = 'a';
+        
+        cout << input << endl;
     }
     return 0;
 }
